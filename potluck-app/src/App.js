@@ -7,7 +7,8 @@ import { useHistory } from 'react-router'
 import Home from './components/Home'
 import MyPotlucks from './components/MyPotlucks'
 import CreatePotluck from './components/CreatePotluck'
-
+import Login from './components/Login'
+import Signup from './components/Signup'
 
 ///// Initial States /////
 const initialFormValues = {
@@ -59,14 +60,20 @@ function App() {
   const routeToHome = () => {
     history.push(`/`);
   }
-
-  
+  const routeToLogin = () =>{
+    history.push('/Login')
+  }
+  const routeToSignup = () =>{
+    history.push('/signup')
+  }
 
   return (
     <>
       <div className="header">
         <h1>Potluck App!</h1>
         <button onClick={routeToHome}>Home</button>
+        <button onClick ={routeToLogin}>Login</button>
+        <button onClick = {routeToSignup}>Sign up</button>
       </div>
 
       <Switch>
@@ -75,6 +82,12 @@ function App() {
         </Route>
         <Route path='/mypotlucks'>
           <MyPotlucks/>
+        </Route>
+        <Route path ='/login'>
+          <Login/>
+        </Route>
+        <Route path = '/signup'>
+          <Signup/>
         </Route>
         <Route path='/createpotluck'>
           <CreatePotluck

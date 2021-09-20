@@ -11,10 +11,12 @@ export default function Home() {
     const routeToCreate = () => {
         history.push(`/createpotluck`);
       }
+  
     return(
         <div>
             <button onClick={routeToMyPotlucks}>My Potlucks!</button>
             <button onClick={routeToCreate}>Create Potluck!</button>
+            
         </div>
     )
     
