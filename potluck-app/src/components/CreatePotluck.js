@@ -25,8 +25,7 @@ export default function CreatePotluck(props) {
             A form to create a Potluck will go here
         </div>
         <form onSubmit={onSubmit}>
-        <button>Create Potluck</button>
-        <br/>
+        
             <TextField
                 id='date'
                 label='Choose your date'
@@ -56,6 +55,9 @@ export default function CreatePotluck(props) {
                 name='location'
                 onChange={onChange}
             />
+            <br/>
+            <button>Create Potluck</button>
+        
         </form>
     </>
     )

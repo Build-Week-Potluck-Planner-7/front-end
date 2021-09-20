@@ -7,7 +7,7 @@ import { useHistory } from 'react-router'
 import Home from './components/Home'
 import MyPotlucks from './components/MyPotlucks'
 import CreatePotluck from './components/CreatePotluck'
-import { ValidationError } from 'yup'
+
 
 ///// Initial States /////
 const initialFormValues = {
@@ -33,6 +33,8 @@ function App() {
   const [disabled, setDisabled] = useState(initialDisabled);
 
   ///// Event Handlers /////
+  // The input change function will check to see if an input is updated on the form and then
+  // update the form value variable we will use to create a potluck object
   const inputChange = (name, value) => {
     // we need a validate function here in the future
     setFormValues({
