@@ -5,17 +5,16 @@ import { useHistory } from 'react-router';
 function Signup() {
     const [error, setError] = useState('');
     const {push} = useHistory()
-    const [details, setDetails] = useState({name:'', username:'', password: ''})
+    const [details, setDetails] = useState({ username:'', password: ''})
 
     const submitHandler = e =>{
         e.preventDefault();
-    //     axios.post(/*Insert endpoint*/, details)
-    //     .then(res=>{
-    //         console.log('Submit', res.data)
-    //         localStorage.setItem('token', res.data.token);
-    //         setAuth(res.data.token)
-    //         push('/')
-    //     })
+        axios.post(`https://potluck-planner-7.herokuapp.com/api/auth/register`, details)
+        .then(res=>{
+            console.log('Submit', res.data)
+
+            push('/login')
+        }).catch(err => setError('Username already taken'))
     }
 
     return (
@@ -23,10 +22,7 @@ function Signup() {
             <div className ='form-card'>
                 <h2 className = 'form-title'>Sign up</h2>
                 {(error !== '') ? (<div className = 'error'>{error}</div>) : ''}
-                <div className ='form-group'>
-                    <label htmlFor ='username'>Name: </label>
-                    <input type ='name' name ='name' id = 'name' onChange ={e => setDetails({...details, name: e.target.value})} value ={details.name}/>
-                </div>
+          
                 <div className ='form-group'>
                     <label htmlFor ='username'>Username: </label>
                     <input type ='username' name ='username' id = 'username' onChange ={e => setDetails({...details, username: e.target.value})} value ={details.username}/>

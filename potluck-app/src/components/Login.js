@@ -10,14 +10,14 @@ function Login() {
 
     const submitHandler = e =>{
         e.preventDefault();
-    //     axios.post(/*Insert endpoint*/, details)
-    //     .then(res=>{
-    //         console.log('Submit', res.data)
-    //         localStorage.setItem('token', res.data.token);
-    //         setAuth(res.data.token)
-    //         push('/')
-    //     })
-    }
+         axios.post(`https://potluck-planner-7.herokuapp.com/api/auth/login`, details)
+         .then(res=>{
+             console.log('Submit', res.data)
+             localStorage.setItem('token', res.data.token);
+             
+             push('/')
+         })
+    }  
 
     return (
         <form onSubmit ={submitHandler}>
