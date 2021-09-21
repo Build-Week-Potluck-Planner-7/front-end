@@ -3,20 +3,23 @@ import React, {useState} from 'react'
 import { Link} from 'react-router-dom';
 import { useHistory } from 'react-router';
 
-function Login() {
+function Login(props) {
     const [error, setError] = useState('');
     const {push} = useHistory()
     const [details, setDetails] = useState({username:'', password: ''})
-
+    console.log(props)
     const submitHandler = e =>{
         e.preventDefault();
          axios.post(`https://potluck-planner-7.herokuapp.com/api/auth/login`, details)
          .then(res=>{
              console.log('Submit', res.data)
              localStorage.setItem('token', res.data.token);
-             
-             push('/')
-         })
+             console.log(res.data.user_id)
+             props.values.id = res.data.user_id
+             props.values.username = res.data.username
+             push('/home')
+            //  window.location.reload(true);
+         }).catch(err=> setError('The login you have entered is invalid'))
     }  
 
     return (
