@@ -16,6 +16,9 @@ const initialFormValues = {
   date: '',
   time: '',
   location: '',
+  item1: '',
+  item2: '',
+  item3: ''
 
   
 }
@@ -38,6 +41,7 @@ function App() {
   // update the form value variable we will use to create a potluck object
   const inputChange = (name, value) => {
     // we need a validate function here in the future
+    // validate()
     setFormValues({
       ...formValues,
       [name]: value

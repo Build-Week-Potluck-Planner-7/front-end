@@ -55,6 +55,27 @@ export default function CreatePotluck(props) {
                 name='location'
                 onChange={onChange}
             />
+            <TextField
+                label='Item 1'
+                type='text'
+                value={values.item1}
+                name='item1'
+                onChange={onChange}
+            />
+            <TextField
+                label='Item 2'
+                type='text'
+                value={values.item2}
+                name='item2'
+                onChange={onChange}
+            />
+            <TextField
+                label='Item 3'
+                type='text'
+                value={values.item3}
+                name='item3'
+                onChange={onChange}
+            />
             <br/>
             <button>Create Potluck</button>
         
