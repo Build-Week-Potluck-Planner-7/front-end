@@ -41,3 +41,20 @@ export const SIGNUP_FAILURE = 'SIGNUP_FAILURE';
 export const signupFailure = (errorObj) => {
   return {type: SIGNUP_FAILURE, payload: errorObj};
 };
+
+// Potluck Actions
+
+export const ADD_POTLUCK_START = 'ADD_POTLUCK_START';
+export const addPotluckStart = () => {
+  return {type: ADD_POTLUCK_START};
+};
+
+export const ADD_POTLUCK_SUCCESS = 'ADD_POTLUCK_SUCCESS';
+export const addPotluckSuccess = (potluckObj) => {
+  return {type: ADD_POTLUCK_SUCCESS, payload: potluckObj};
+};
+
+export const ADD_POTLUCK_FAILURE = 'ADD_POTLUCK_FAILURE';
+export const addPotluckFailure = (potluckErr) => {
+  return {type: ADD_POTLUCK_SUCCESS, payload: potluckErr};
+};
