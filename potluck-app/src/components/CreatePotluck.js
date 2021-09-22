@@ -56,7 +56,7 @@ export default function CreatePotluck(props) {
                 onChange={onChange}
             />
             <br/>
-            <button>Create Potluck</button>
+            <button className="btn" >Create Potluck</button>
         
         </form>
     </>

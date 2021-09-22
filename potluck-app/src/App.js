@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { useHistory } from 'react-router'
-
+import'./components/App.css'
 
 ////// Components /////
 import Home from './components/Home'
@@ -70,13 +70,12 @@ function App() {
   }
 
   return (
-    <>
+    <> 
       <div className="header">
         <h1>Potluck App!</h1>
-        <button onClick={routeToHome}>Home</button>
-        <button onClick ={routeToLogin}>Login</button>
-        <button onClick = {routeToSignup}>Sign up</button>
-        <img src="/images/bangkok_street_food.0.jpg" alt=""/>
+        <button className="btn" onClick={routeToHome}>Home</button>
+        <button className="btn" onClick ={routeToLogin}>Login</button>
+        <button className="btn" onClick = {routeToSignup}>Sign up</button>
       </div>
 
       <Switch>
@@ -103,6 +102,7 @@ function App() {
       
     </>
   );
+
 }
 
 export default App;
