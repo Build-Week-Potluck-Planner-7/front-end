@@ -19,9 +19,7 @@ const initialFormValues = {
   date: '',
   time: '',
   location: '',
-  item1: '',
-  item2: '',
-  item3: ''
+  items: ''
 
   
 }
@@ -70,7 +68,8 @@ const App = (props) => {
       potluck_name:userValues.username,
       potluck_date: formValues.date,
       potluck_time: formValues.time,
-      potluck_location: formValues.location
+      potluck_location: formValues.location,
+      potluck_item: formValues.item
     }
 
     //postNewOrder(newPotluck); We will eventually update a server with a new potluck
