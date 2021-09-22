@@ -21,9 +21,6 @@ export default function CreatePotluck(props) {
     
     return (
     <>
-        <div>
-            A form to create a Potluck will go here
-        </div>
         <form onSubmit={onSubmit}>
         
             <TextField
@@ -56,26 +53,13 @@ export default function CreatePotluck(props) {
                 onChange={onChange}
             />
             <TextField
-                label='Item 1'
+                label='Items'
                 type='text'
-                value={values.item1}
-                name='item1'
+                value={values.item}
+                name='item'
                 onChange={onChange}
             />
-            <TextField
-                label='Item 2'
-                type='text'
-                value={values.item2}
-                name='item2'
-                onChange={onChange}
-            />
-            <TextField
-                label='Item 3'
-                type='text'
-                value={values.item3}
-                name='item3'
-                onChange={onChange}
-            />
+            
             <br/>
             <button>Create Potluck</button>
         
