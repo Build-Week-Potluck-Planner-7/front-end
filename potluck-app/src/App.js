@@ -24,6 +24,8 @@ const initialDisabled = true;
 const initialPotluck = [];
 
 ////////////////////////////////////
+ 
+  
 
 
 
@@ -74,6 +76,7 @@ function App() {
         <button onClick={routeToHome}>Home</button>
         <button onClick ={routeToLogin}>Login</button>
         <button onClick = {routeToSignup}>Sign up</button>
+        <img src="/images/bangkok_street_food.0.jpg" alt=""/>
       </div>
 
       <Switch>
