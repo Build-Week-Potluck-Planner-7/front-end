@@ -73,9 +73,11 @@ function App() {
     <> 
       <div className="header">
         <h1>Potluck App!</h1>
-        <button className="btn" onClick={routeToHome}>Home</button>
-        <button className="btn" onClick ={routeToLogin}>Login</button>
-        <button className="btn" onClick = {routeToSignup}>Sign up</button>
+        <div className="button">
+            <button className="btnStyle" onClick={routeToHome}>Home</button>
+            <button className="btnStyle" onClick ={routeToLogin}>Login</button>
+            <button className="btnStyle" onClick = {routeToSignup}>Sign up</button>
+        </div>
       </div>
 
       <Switch>

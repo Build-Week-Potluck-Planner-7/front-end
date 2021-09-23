@@ -14,8 +14,8 @@ export default function Home() {
   
     return(
         <div>
-            <button className="btn" onClick={routeToMyPotlucks}>My Potlucks!</button>
-            <button className="btn" onClick={routeToCreate}>Create Potluck!</button>
+            <button className="btnStyle" onClick={routeToMyPotlucks}>My Potlucks!</button>
+            <button className="btnStyle" onClick={routeToCreate}>Create Potluck!</button>
             
         </div>
     )
