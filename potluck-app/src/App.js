@@ -11,7 +11,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import { Button } from '@material-ui/core'
 import axiosWithAuth from './components/helpers/axiosWithAuth';
-
+import './App.css'
 
 ///// Initial States /////
 const initialFormValues = {
@@ -101,7 +101,7 @@ const App = (props) => {
       <div className="header">
         <h1>Potluck App!</h1>
         <nav>{
-        (localStorage.getItem('token')) ? ( <><button onClick={routeToHome}>Home</button> <button onClick={Logout}>Logout</button> </>):(<><button onClick={routeToLogin}> Login </button><button onClick={routeToSignup}>Sign-up </button></>)
+        (localStorage.getItem('token')) ? ( <><button className="btnStyle"  onClick={routeToHome}>Home</button> <button className="btnStyle"  onClick={Logout}>Logout</button> </>):(<><button className="btnStyle"  onClick={routeToLogin}> Login </button><button className="btnStyle"  onClick={routeToSignup}>Sign-up </button></>)
         }</nav>
       </div>
 

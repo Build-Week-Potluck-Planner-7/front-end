@@ -61,7 +61,7 @@ export default function CreatePotluck(props) {
             />
             
             <br/>
-            <button>Create Potluck</button>
+            <button className="btnStyle" >Create Potluck</button>
         
         </form>
     </>

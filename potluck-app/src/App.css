@@ -1,0 +1,31 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+.btnStyle{
+    background-color:olivedrab;
+    padding: 10px 20px;
+    border: 5px;
+}
+h1{
+        text-align: center;
+        font-style: oblique;
+    text-decoration:underline ;
+    font-weight: bolder;
+    color:burlywood;
+    text-decoration-color:
+    black;
+}
+h2{
+    text-align: center;
+    font-style: oblique; 
+  font-weight: bolder;
+color:burlywood;
+}
+
+body{
+    background-color:darkolivegreen;
+}
+
+.header{justify-content: space-evenly;
+    background-color:black;}
